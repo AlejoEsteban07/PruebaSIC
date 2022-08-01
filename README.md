@@ -3,6 +3,8 @@ PruebaSIC
 
 
 El proyecto se encuentra compartido en Github-> https://github.com/AlejoEsteban07/PruebaSIC.git
+
+
 Pre-requisitos 📋
 IDE de desarrollo para el back. Puede ser Netbeans o Eclipse
 Java 1.8 o posterior
@@ -16,6 +18,7 @@ Desde una terminal (cmd) abrir la ubicacion del proyecto
 ejecutar el comando npm i. el cual descargara las librerias y componentes necesarios para que el front funcione correctamente.
 ejecutar el comando ng serve -o para desplegar la aplicación
 
+
 Ejecutando las pruebas ⚙️
 El usuario puede realizar su respectivo registro desde la opcion Registrarse
 Una vez registrado en la pantalla login podra ingresar su usuario y contraseña para ir a la pantalla principal del perfil
@@ -24,6 +27,7 @@ En la opción de Consultar, se listaran los tramites que se encuentren creados, 
 En la opción de Agregar el usuario podra crear un nuevo tramite.
 Despliegue 📦
 El proyecto cuenta con un servidor embebido (Tomcat) para realizar el respectivo despliegue del back
+
 
 Construido con 🛠️
 Spring Tools Suit 4.0- IDE usado
