@@ -1,0 +1,69 @@
+<div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg5.jpg') ;">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <div class="photo-container">
+                    <img src="assets/img/ryan.jpg" alt="">
+                </div>
+                <h3 class="title">{{dataUsuario}}</h3>
+                <p class="category">Perfil</p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section section-contact-us text-center" *ngIf="!consultarTramite && !agregaTramite">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                        <div class="send-button">
+                            <a class="btn btn-primary btn-round btn-block btn-lg" (click)="agregarTramite()">Crear Tramite</a>
+                        </div>
+
+                        <div class="send-button">
+                            <a class="btn btn-primary btn-round btn-block btn-lg" (click)="consultarTramite()">Consultar Tramite</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-contact-us text-center" *ngIf="agregaTramite">
+            <div class="container">
+                <p *ngIf="tramiteAgregado">
+                    <ngb-alert [dismissible]="false">
+                        <strong>Exito!</strong> Se creo correctamente el Tramite.
+                    </ngb-alert>
+                </p>
+                <h2 class="title">Agregar Tramite</h2>
+                <div class="row">
+                    <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                            <input type="text" class="form-control" #anoRadicacion placeholder="Año Radicación" (focus)="focus=true" (blur)="focus=false">
+                        </div>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                            <input type="text" class="form-control" #nombreTramite placeholder="Nombre Tramite" (focus)="focus1=true" (blur)="focus1=false">
+                        </div>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus===true}">
+                            <input type="text" class="form-control" #descripcion placeholder="Descripción" (focus)="focus=true" (blur)="focus=false">
+                        </div>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                            <input type="text" class="form-control" #personaRadico placeholder="Numero Identificación Persona Radico" (focus)="focus1=true" (blur)="focus1=false">
+                        </div>
+                        <div class="input-group input-lg" [ngClass]="{'input-group-focus':focus1===true}">
+                            <input type="text" class="form-control" #funcionarioRecibio placeholder="Nombre funcionario Recibio Tramite" (focus)="focus1=true" (blur)="focus1=false">
+                        </div>
+                        <div class="send-button">
+                            <a class="btn btn-primary btn-round btn-block btn-lg" (click)="agregar(anoRadicacion.value,nombreTramite.value, descripcion.value, personaRadico.value, funcionarioRecibio.value)">Agregar</a>
+                        </div>
+                        <div class="send-button">
+                            <a class="btn btn-primary btn-round btn-block btn-lg" (click)="volver()">Volver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
